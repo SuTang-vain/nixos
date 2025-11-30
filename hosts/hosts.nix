@@ -1,7 +1,7 @@
 [
   {
-    host = "eden-inspiron";
-    user = "eden";
+    host = "my-nixos";
+    user = "sutang";
     extraOSModules = [ ./inspiron/os.nix ];
     extraHomeModules = [ ./inspiron/home.nix ];
     extraHomeArgs = {
