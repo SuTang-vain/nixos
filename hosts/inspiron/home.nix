@@ -9,7 +9,7 @@
         refresh = 60.0;
       };
       position = {
-        x = 1000;
+        x = 0;
         y = 0;
       };
       rotation = 0;
