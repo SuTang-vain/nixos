@@ -29,8 +29,16 @@
       passthru.providedSessions = [ "scroll" ];
     });
     inherit (inputs.nixpkgs-wayland.packages.${final.stdenv.hostPlatform.system}) swww;
+
+    # Skip broken packages that cause rebuild to hang
+    todesk = final.writeScriptBin "todesk" ''
+      #!/usr/bin/env bash
+      echo "todesk skipped by overlay" >&2
+      exit 0
+    '';
   };
 
+  # 继承其他 overlays
   inherit (inputs.niri.overlays) niri;
   nur = inputs.nur.overlays.default;
   nix-matlab = inputs.nix-matlab.overlay;

@@ -1,3 +1,3 @@
 {
-  services.todesk.enable = true;
+  services.todesk.enable = false;
 }

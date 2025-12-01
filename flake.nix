@@ -1,5 +1,5 @@
 {
-  description = "Eden's NixOS Flake";
+  description = "SuTang's NixOS Configuration";
 
   outputs =
     {
@@ -47,20 +47,14 @@
 
   inputs = {
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-25.05";
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable-small";
+    nixpkgs.url = "github:NixOS/nixpkgs/2d293cbfa5a793b4c50d17c05ef9e385b90edf6c"; # 2025-11-30
     home-manager = {
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     flake-parts.url = "github:hercules-ci/flake-parts";
-    # niri-unstable = {
-    #   url = "github:YalTeR/niri";
-    #   # url = "github:visualglitch91/niri/feat/blur-lite";
-    #   flake = false;
-    # };
     niri = {
       url = "github:sodiboo/niri-flake";
-      # inputs.niri-unstable.follows = "niri-unstable";
     };
     nur.url = "github:nix-community/NUR";
     stylix = {
@@ -76,7 +70,7 @@
       url = "github:nix-community/nixd";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nh.url = "github:nix-community/nh";
+    # nh.url = "github:nix-community/nh";  # Using stable version from nixpkgs instead
     treefmt-nix.url = "github:numtide/treefmt-nix";
     agenix.url = "github:ryantm/agenix";
     mangowc.url = "github:DreamMaoMao/mangowc";

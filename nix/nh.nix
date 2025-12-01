@@ -3,13 +3,12 @@
   host,
   user,
   pkgs,
-  inputs,
   ...
 }:
 {
   programs.nh = {
     enable = true;
-    package = inputs.nh.packages.${pkgs.stdenv.hostPlatform.system}.nh;
+    package = pkgs.nh;  # 使用 stable version from nixpkgs
     clean = {
       enable = true;
       dates = "3 days";
