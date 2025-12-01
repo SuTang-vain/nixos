@@ -29,5 +29,9 @@
       rotation = 90;
     };
   };
-  home.stateVersion = "23.11";
+
+  # 禁用版本检查
+  stylix = {
+    enableReleaseChecks = false; };
+  home.stateVersion = "25.05";
 }
