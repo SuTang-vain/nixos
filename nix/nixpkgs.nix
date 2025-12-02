@@ -9,6 +9,6 @@
       ];
       allowUnsupportedSystem = true;
     };
-    overlays = builtins.attrValues self.overlays;
+    overlays = builtins.attrValues (builtins.removeAttrs self.overlays [ "modifications" ]) ++ [ self.overlays.modifications ];
   };
 }
