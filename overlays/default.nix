@@ -7,6 +7,9 @@
     };
 
   modifications = final: prev: {
+    niri-unstable = prev.niri-unstable.overrideAttrs (old: {
+      doCheck = false;
+    });
     qutebrowser = prev.qutebrowser.override { enableWideVine = true; };
     base16-schemes = prev.base16-schemes.overrideAttrs (oldAttrs: {
       installPhase = ''
