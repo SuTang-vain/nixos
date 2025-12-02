@@ -1,4 +1,4 @@
-# SuTang's NixOS Configuration
+# NixOS Configuration
 
 一个现代化的、功能完整的 NixOS 配置，支持 Wayland、Niri 窗口管理器和完整的开发环境。
 
